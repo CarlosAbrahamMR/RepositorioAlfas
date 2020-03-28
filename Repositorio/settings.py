@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'Repositorio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
+        'NAME': 'spotify',
         'PORT':'3306',
         'HOST':'localhost',
         'USER':'root',
