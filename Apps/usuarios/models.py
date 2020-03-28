@@ -35,6 +35,11 @@ class Playlist(models.Model):
     nombre = models.CharField(max_length = 30)
     usuario = models.ForeignKey(User, on_delete = models.CASCADE)
 
-class UsuarioCanciones(models.Model):
-    playlist = models.ForeignKey('Playlist', on_delete = models.CASCADE)
-    cancion = models.ForeignKey('Cancion', on_delete = models.CASCADE)
+
+class PlaylistCanciones(models.Model):
+    playlist = models.ForeignKey('PlayList', on_delete=models.CASCADE)
+    cancion = models.ForeignKey('Cancion', on_delete=models.CASCADE)
+
+class UsuariosCanciones(models.Model):
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    cancion = models.ForeignKey('Cancion', on_delete=models.CASCADE)
