@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Apps.usuarios import views as views_usuarios
+from Apps.reproduccion import views as views_reproduccion
 
 urlpatterns = [
-    path('', views_usuarios.loginn, name='home'),
-    path('register/', views_usuarios.register, name='register'),
-
+    path('', views_reproduccion.home, name='home'),
 ]
 
